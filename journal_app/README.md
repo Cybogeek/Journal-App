@@ -1,6 +1,6 @@
 # Journal App
 
-#### version: 0.1
+#### Version: 0.1
 
 A simple Flutter application for writing, organizing, and reviewing personal journal entries. The app provides a clean space to record thoughts, experiences, and daily reflections.
 
@@ -8,10 +8,10 @@ A simple Flutter application for writing, organizing, and reviewing personal jou
 
 - Create and save journal entries
 - View entries in a chronological list
-- Read, and delete existing entries
+- Read and delete existing entries
 - Add a title, current date, and detailed journal content
-- Search or filter entries (where implemented) --(will be implemented in enext update)
-- Responsive layout for mobile screen sizes --(will be implemented in enext update)
+- Search or filter entries (where implemented) --(will be implemented in the next update)
+- Responsive layout for mobile screen sizes --(will be implemented in the next update)
 - Simple, distraction-free user interface
 
 ## Tools and Technologies
@@ -36,7 +36,7 @@ lib/
 ├── widgets/               # Reusable UI components
 ├── provider/              # Flutter Riverpod provider and Notifier
 ├── theme/                 # Colors, typography, and app theme (*--will be implemented in next update)
-└── data/                  # Sam,ple Journal Data
+└── data/                  # Sample Journal Data
 ```
 
 ## Getting Started
@@ -50,7 +50,7 @@ lib/
 ### Installation
 
 ```bash
-git clone <repository-url>
+git clone (https://github.com/Cybogeek/Journal-App/tree/main/journal_app)
 cd journal_app
 flutter pub get
 flutter run
@@ -65,7 +65,7 @@ flutter test
 
 ## Usage
 
-Launch the app, create a new entry, add the required details, and save it. Select an entry to view or delete it, or use the available slide to delete action to remove it.
+Launch the app, create a new entry, add the required details, and save it. Select an entry to view or delete it, or use the available slide-to-delete action to remove it.
 
 ## Future Improvements
 
