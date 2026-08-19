@@ -78,16 +78,16 @@ Launch the app, create a new entry, add the required details, and save it. Selec
 
 ## Screenshots
 
-Add screenshots or screen recordings of the working application below:
 
 ### Home Screen
 
-<!-- Add image here, for example: ![Home Screen](screenshots/home_screen.png) -->
+<img width="281" height="644" alt="no-entry-home" src="https://github.com/user-attachments/assets/82bcf393-4fb3-4750-afcb-73737d228205" />
+<img width="280" height="646" alt="entry-home" src="https://github.com/user-attachments/assets/6c9c37c3-2c84-48c2-92e9-fc269ad0045a" />
 
 ### Journal Entry Screen
 
-<!-- Add image here, for example: ![Journal Entry](screenshots/journal_entry.png) -->
+<img width="278" height="644" alt="journal-entry-form" src="https://github.com/user-attachments/assets/692f48c2-87e9-452c-8426-ea0efc8aea98" />?
 
 ### Entry Details
 
-<!-- Add image here, for example: ![Entry Details](screenshots/entry_details.png) -->
+https://github.com/user-attachments/assets/017162b4-abdb-4809-92c8-08331b0c3769
