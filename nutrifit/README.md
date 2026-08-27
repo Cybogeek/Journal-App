@@ -44,7 +44,7 @@ topic title and supporting information, with navigation back to the home screen.
 ### Run the App
 
 ```bash
-git clone <repository-url>
+git clone [<repository-url>](https://github.com/Cybogeek/Journal-App/tree/main/nutrifit)
 cd nutrifit
 flutter pub get
 flutter run
@@ -87,9 +87,13 @@ Add screenshots of the working app below:
 
 | Home Screen                            | Detail Screen                              |
 | -------------------------------------- | ------------------------------------------ |
-| `![Home Screen](screenshots/home.png)` | `![Detail Screen](screenshots/detail.png)` |
+| <img alt="nutrifit-home" src="https://github.com/user-attachments/assets/c36333a1-76ec-476e-84f9-b2f12ecacc2c" />| <img alt="nutrifit-details" src="https://github.com/user-attachments/assets/cd246c72-a620-4243-a36e-1da8378726da" />|
 
-Replace the image paths with the actual screenshot locations in the project.
+| Filter Screen                            | Filter Screen                              |
+| -------------------------------------- | ------------------------------------------ |
+| <img alt="nutrifit-filter" src="https://github.com/user-attachments/assets/04fbab11-22ec-4833-b2a1-fd62a4764c2f" />|<img alt="nutrifit-cate" src="https://github.com/user-attachments/assets/767bb395-28d3-4ddf-9b7b-c28a9ab9a57b"/>|
+
+
 
 ## Resources
 
