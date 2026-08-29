@@ -37,14 +37,10 @@ The counter state is managed by a Riverpod notifier. Whenever the value changes,
 
 ## Screenshots
 
-<!-- Add screenshots here. Example: ![Counter app screenshot](screenshots/counter.png) -->
-
-| Home Screen | Increment | Decrement | Reset |
-| ----------- | --------- | --------- | ----- |
-|             |           |           |       |
+| Home Screen | Increment | Decrement |
+| ----------- | --------- | --------- |
+|<img alt="counter-home" src="https://github.com/user-attachments/assets/1ff31896-d422-4667-9e24-362ed3031485" />|<img alt="counter-increment" src="https://github.com/user-attachments/assets/473bb8bb-cca8-473c-a2f5-c2563612694f" />|<img alt="counter decrement" src="https://github.com/user-attachments/assets/92ac0516-deb7-4c97-bf71-85a3dc3d4769" />|
 
 ## Demo Video
 
-<!-- Add a short video or link here. Example: [Watch the app demo](path/to/demo-video.mp4) -->
-
-| |
+| [counter-app.webm](https://github.com/user-attachments/assets/aeb3775b-b2fe-48e8-9266-e516d74ab6c3)|
