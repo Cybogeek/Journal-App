@@ -3,4 +3,7 @@ The Main App is in the Journal App Folder with a dedicated README.md file. The S
 
 ## NutriFit App
 Check the App folder for a dedicated README file and app details.
+
+## Easy Counter App
+Check the app folder and README file for details. It shows the use of state management and persistent data management in a simple counter app. 
 ### ***** TEST, TRY & Suggest Improvements *****
