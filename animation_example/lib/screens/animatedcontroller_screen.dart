@@ -13,6 +13,7 @@ class _AnimatedcontrollerScreenState extends State<AnimatedcontrollerScreen>
   late AnimationController _controller;
   late Animation<double> _rotation;
   late Animation<double> _scale;
+  late Animation<Color?> _color;
 
   @override
   void initState() {
@@ -31,6 +32,13 @@ class _AnimatedcontrollerScreenState extends State<AnimatedcontrollerScreen>
       begin: 1,
       end: 1.5,
     ).animate(CurvedAnimation(parent: _controller, curve: Curves.elasticOut));
+
+    _color = ColorTween(begin: Colors.amber, end: Colors.blue).animate(
+      CurvedAnimation(
+        parent: _controller,
+        curve: const Interval(0.0, 1.0, curve: Curves.easeInOut),
+      ),
+    );
   }
 
   @override
@@ -67,11 +75,7 @@ class _AnimatedcontrollerScreenState extends State<AnimatedcontrollerScreen>
                   angle: _rotation.value * 2 * 3.14159,
                   child: Transform.scale(
                     scale: _scale.value,
-                    child: const Icon(
-                      Icons.star,
-                      size: 80,
-                      color: Colors.amber,
-                    ),
+                    child: Icon(Icons.star, size: 80, color: _color.value),
                   ),
                 );
               },

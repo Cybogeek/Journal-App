@@ -17,7 +17,7 @@ class _AnimatedcontainerScreenState extends State<AnimatedcontainerScreen> {
     setState(() {
       _isLarge = !_isLarge;
       _color = _isLarge ? Colors.deepPurple : Colors.blue;
-      _borderRadius = _isLarge ? 50 : 10;
+      _borderRadius = _isLarge ? 100 : 16;
     });
   }
 

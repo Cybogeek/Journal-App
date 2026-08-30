@@ -30,7 +30,7 @@ class _AnimatedopacityScreenState extends State<AnimatedopacityScreen> {
             ),
             SizedBox(height: 16),
             AnimatedOpacity(
-              opacity: _isVisible ? 1.0 : 0.0,
+              opacity: _isVisible ? 1.0 : 0.1,
               duration: const Duration(milliseconds: 600),
               curve: Curves.decelerate,
               child: Container(
