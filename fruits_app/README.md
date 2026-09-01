@@ -197,7 +197,7 @@ This structure keeps:
 ## Installation
 
 ```bash
-git clone <your-repository-url>
+git clone [<your-repository-url>](https://github.com/Cybogeek/Journal-App/tree/main/fruits_app)
 cd fruits_explorer
 flutter pub get
 flutter run
@@ -218,10 +218,13 @@ Possible future enhancements:
 
 | Home Screen    | Search Feature     |
 | -------------- | ------------------ |
-| -------------- | ------------------ |
+|<img alt="fruits-app-light" src="https://github.com/user-attachments/assets/fa3c4fc9-c613-415b-9e24-41aa41595817" />|<img alt="fruits-app-search" src="https://github.com/user-attachments/assets/0449cf2b-5059-4cef-824a-4ef51d0e6513" />|
+
 | Details Screen | Dark Theme         |
 | -------------- | ------------------ |
+|<img alt="fruits-app-details" src="https://github.com/user-attachments/assets/ccc69764-050f-43e0-8315-454f146b1492" />|<img alt="fruits-app-dark" src="https://github.com/user-attachments/assets/1efc8727-5473-4701-9dff-07cbc01db643" />|
+
+| Tablet Grid    | Not Found Error State |
 | -------------- | ------------------ |
-| Tablet Grid    | Layout Error State |
-| -------------- | ------------------ |
-| -------------- | ------------------ |
+|<img alt="fruits-app-tab-desktop" src="https://github.com/user-attachments/assets/88890a1d-8469-4a3b-9d74-0c37cc13d6b6" />|<img alt="fruits-app-notfound" src="https://github.com/user-attachments/assets/ecd031d7-f6e8-4aa2-afd0-5536e4dd839f" />|
+
