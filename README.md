@@ -1,6 +1,6 @@
 # Flutter Sample Project Repo
 
-#### Updated 31-08-2026
+#### Updated 01-09-2026
 
 ## Journal App Repo
 
@@ -16,10 +16,14 @@ Check the app folder and README file for details. It shows the use of state mana
 
 ## Animation Example App
 
-Check the app folder and README file for details. It shows the use of state management and persistent data management in a simple counter app.
+Check the app folder and README file for details.
 
 ## Responsive Adaptive App
 
-Check the app folder and README file for details. It shows the use of state management and persistent data management in a simple counter app.
+Check the app folder and README file for details. It shows the use of Media Query and Layouit Builder in a Responsive Adaptive app.
 
-### **\*** TEST, TRY & Suggest Improvements **\***
+## API Demo- Fruits App
+
+Check the app folder and README file for details. It shows the use of REST API and statemanagement in a simple Fruits app.
+
+#### \* TEST, TRY & Suggest Improvements \*
