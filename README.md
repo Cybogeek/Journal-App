@@ -1,6 +1,6 @@
 # Flutter Sample Project Repo
 
-#### Updated 01-09-2026
+#### Updated 03-09-2026
 
 ## Journal App Repo
 
@@ -25,5 +25,11 @@ Check the app folder and README file for details. It shows the use of Media Quer
 ## API Demo- Fruits App
 
 Check the app folder and README file for details. It shows the use of REST API and statemanagement in a simple Fruits app.
+
+## DBMS/ Firebase Demo- Todo App
+
+#### Version :1.0
+
+Check the app folder and README file for details. It shows the use of Firebase as DBMS and statemanagement in a simple Todo app.
 
 #### \* TEST, TRY & Suggest Improvements \*
