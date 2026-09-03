@@ -303,14 +303,22 @@ _Possible later enhancements:_
 
 ## Screenshots
 
-| Screen         | Preview             |
-| -------------- | ------------------- |
 | Signup         | Signin              |
-| ----           | -------             |
+| -------------- | ------------------- |
+| <img alt="todo-signup" src="https://github.com/user-attachments/assets/8c854339-dac9-4ad2-855c-d3a346e0eaf2" />|<img alt="todo-login" src="https://github.com/user-attachments/assets/ebd41c9a-7a41-4bad-b939-140e8bea1aa8" />|
+
 | Home light     | Home dark           |
-| ----           | -------             |
+| -------------- | ------------------- |
+| <img alt="todo-home-light" src="https://github.com/user-attachments/assets/147ccd02-8d54-4223-ac1c-5b4d4d8da200" />| <img alt="todo-home-dark" src="https://github.com/user-attachments/assets/0ad1b033-9dec-402f-81d5-c57ee2160e6b" />|
+
 | Search Success | Not Found           |
-| ----           | -------             |
+| -------------- | ------------------- |
+|<img alt="todo-search" src="https://github.com/user-attachments/assets/42f073f8-885d-470a-bbd8-2f75ca21cbda" />| <img alt="todo-search-not-found" src="https://github.com/user-attachments/assets/6493a1ea-ff2a-464d-a931-1b15d3484f8c" />|
+
 | Add Todo       | Edit Todo           |
-| ----           | -------             |
+| -------------- | ------------------- |
+| <img alt="todo-add" src="https://github.com/user-attachments/assets/0e8753c3-cae1-425d-8f68-1107c7786b60" />|<img alt="todo-edit" src="https://github.com/user-attachments/assets/2a1272b4-f522-4bf1-91fa-f17bb0105b75" />|
+
 | Todo Details   | Color Picker Dialog |
+| -------------- | ------------------- |
+| <img alt="todo-details" src="https://github.com/user-attachments/assets/dc43e263-5afd-43f1-a2ba-9fca93414a82" />|<img alt="todo-theme-color-picker" src="https://github.com/user-attachments/assets/084142a6-3f30-44a9-8ccc-f42be3e77f1b" />|
