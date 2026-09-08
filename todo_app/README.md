@@ -121,6 +121,7 @@ lib/
 | shimmer            | Loading placeholder effects          |
 | google_fonts       | Improved typography                  |
 | material           | Modern Material UI components        |
+|flutter local notification| Set Local Notification |
 
 ## Core Features
 
@@ -343,4 +344,4 @@ New Set Reminder feature is added, It will allow users to set the notification r
 
 | Set Reminder | Reminder In Details | Reminder- Nortification |
 | ------------ | ------------------- | ----------------------- |
-| ----------   | ----------          | --------                |
+|<img alt="Todo-date-time-picker" src="https://github.com/user-attachments/assets/46de8e79-5cf5-47dc-a7fa-2de59991d4d2" />|<img alt="todo-reminder-set" src="https://github.com/user-attachments/assets/98655829-8a9d-4631-80d4-01739a77a336" />|<img alt="Todo-reminder-call" src="https://github.com/user-attachments/assets/878ce197-c61e-4839-9d26-47f927cae223" />|
