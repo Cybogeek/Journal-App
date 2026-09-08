@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 import '../../domain/entities/todo_entity.dart';
 
@@ -55,9 +56,23 @@ class TodoDetailSheet extends StatelessWidget {
                 color: todo.isCompleted ? Colors.green : Colors.grey,
               ),
               const SizedBox(width: 8),
-              Text(todo.isCompleted ? 'Completed' : 'Pending'),
+              Text(todo.isCompleted ? 'Task Completed' : 'Task Pending'),
             ],
           ),
+          if (todo.reminderAt != null) ...[
+            const SizedBox(height: 12),
+            Row(
+              children: [
+                const Icon(Icons.notifications_active_outlined),
+                const SizedBox(width: 8),
+                Expanded(
+                  child: Text(
+                    'Reminder set for: ${DateFormat('MMM d, yyyy • h:mm a').format(todo.reminderAt!)}',
+                  ),
+                ),
+              ],
+            ),
+          ],
           const SizedBox(height: 20),
         ],
       ),

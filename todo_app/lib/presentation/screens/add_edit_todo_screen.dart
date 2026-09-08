@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:todo_app/core/services/notification_service.dart';
 
 import '../../domain/entities/todo_entity.dart';
 import '../providers/auth_provider.dart';
 import '../providers/todo_provider.dart';
+import '../widgets/reminder_picker_tile.dart';
 
 class AddEditTodoScreen extends ConsumerStatefulWidget {
   final TodoEntity? todo;
@@ -20,6 +22,7 @@ class _AddEditTodoScreenState extends ConsumerState<AddEditTodoScreen> {
   final _description = TextEditingController();
 
   late Color selectedColor;
+  DateTime? selectedReminderAt;
 
   @override
   void initState() {
@@ -27,6 +30,7 @@ class _AddEditTodoScreenState extends ConsumerState<AddEditTodoScreen> {
     _title.text = widget.todo?.title ?? '';
     _description.text = widget.todo?.description ?? '';
     selectedColor = Color(widget.todo?.colorValue ?? 0xFF6750A4);
+    selectedReminderAt = widget.todo?.reminderAt;
   }
 
   @override
@@ -34,6 +38,36 @@ class _AddEditTodoScreenState extends ConsumerState<AddEditTodoScreen> {
     _title.dispose();
     _description.dispose();
     super.dispose();
+  }
+
+  Future<void> _pickReminder() async {
+    final now = DateTime.now();
+
+    final pickedDate = await showDatePicker(
+      context: context,
+      initialDate: selectedReminderAt ?? now,
+      firstDate: now,
+      lastDate: DateTime(now.year + 5),
+    );
+
+    if (pickedDate == null || !mounted) return;
+
+    final pickedTime = await showTimePicker(
+      context: context,
+      initialTime: TimeOfDay.fromDateTime(selectedReminderAt ?? now),
+    );
+
+    if (pickedTime == null) return;
+
+    setState(() {
+      selectedReminderAt = DateTime(
+        pickedDate.year,
+        pickedDate.month,
+        pickedDate.day,
+        pickedTime.hour,
+        pickedTime.minute,
+      );
+    });
   }
 
   Future<void> _save() async {
@@ -53,6 +87,7 @@ class _AddEditTodoScreenState extends ConsumerState<AddEditTodoScreen> {
       createdAt: widget.todo?.createdAt ?? now,
       updatedAt: now,
       dueDate: widget.todo?.dueDate,
+      reminderAt: selectedReminderAt,
       colorValue: selectedColor.toARGB32(),
     );
 
@@ -141,6 +176,16 @@ class _AddEditTodoScreenState extends ConsumerState<AddEditTodoScreen> {
                               },
                             ),
                             const SizedBox(height: 20),
+                            ReminderPickerTile(
+                              reminderAt: selectedReminderAt,
+                              onPick: _pickReminder,
+                              onClear: () {
+                                setState(() {
+                                  selectedReminderAt = null;
+                                });
+                              },
+                            ),
+                            const SizedBox(height: 20),
                             Align(
                               alignment: Alignment.centerLeft,
                               child: Text(
@@ -204,6 +249,22 @@ class _AddEditTodoScreenState extends ConsumerState<AddEditTodoScreen> {
                                 ),
                               ),
                             ),
+                            //demo notification test button
+                            // IconButton(
+                            //   onPressed: () async {
+                            //     await NotificationService.instance
+                            //         .scheduleTodoReminder(
+                            //           notificationId: 777,
+                            //           title: 'Scheduled Test',
+                            //           body:
+                            //               'This should appear after 1 minute.',
+                            //           scheduledAt: DateTime.now().add(
+                            //             const Duration(minutes: 1),
+                            //           ),
+                            //         );
+                            //   },
+                            //   icon: const Icon(Icons.notifications_active),
+                            // ),
                           ],
                         ),
                       ),

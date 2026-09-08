@@ -7,6 +7,7 @@ class TodoEntity {
   final DateTime createdAt;
   final DateTime updatedAt;
   final DateTime? dueDate;
+  final DateTime? reminderAt;
   final int colorValue;
 
   const TodoEntity({
@@ -18,6 +19,7 @@ class TodoEntity {
     required this.createdAt,
     required this.updatedAt,
     this.dueDate,
+    this.reminderAt,
     required this.colorValue,
   });
 
@@ -30,6 +32,7 @@ class TodoEntity {
     DateTime? createdAt,
     DateTime? updatedAt,
     DateTime? dueDate,
+    DateTime? reminderAt,
     int? colorValue,
   }) {
     return TodoEntity(
@@ -41,6 +44,7 @@ class TodoEntity {
       createdAt: createdAt ?? this.createdAt,
       updatedAt: updatedAt ?? this.updatedAt,
       dueDate: dueDate ?? this.dueDate,
+      reminderAt: reminderAt ?? this.reminderAt,
       colorValue: colorValue ?? this.colorValue,
     );
   }

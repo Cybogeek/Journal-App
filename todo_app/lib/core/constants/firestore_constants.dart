@@ -14,4 +14,5 @@ class FirestoreConstants {
   static const updatedAt = 'updatedAt';
   static const dueDate = 'dueDate';
   static const colorValue = 'colorValue';
+  static const reminderAt = 'reminderAt';
 }

@@ -1,6 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:todo_app/presentation/providers/ui_provider.dart';
 
+import '../../core/services/notification_service.dart';
+import '../../core/utils/date_time_helper.dart';
 import '../../data/datasources/todo_remote_data_source.dart';
 import '../../data/repositories/todo_repository_impl.dart';
 import '../../domain/entities/todo_entity.dart';
@@ -10,6 +11,7 @@ import '../../domain/usecases/todo/get_todos_usecase.dart';
 import '../../domain/usecases/todo/toggle_todo_usecase.dart';
 import '../../domain/usecases/todo/update_todo_usecase.dart';
 import 'auth_provider.dart';
+import 'ui_provider.dart';
 
 final todoRemoteDataSourceProvider = Provider<TodoRemoteDataSource>((ref) {
   return TodoRemoteDataSourceImpl(ref.read(firestoreProvider));
@@ -67,6 +69,15 @@ class TodoController extends AsyncNotifier<void> {
     state = const AsyncLoading();
     state = await AsyncValue.guard(() async {
       await ref.read(addTodoUseCaseProvider).call(todo);
+
+      if (todo.reminderAt != null) {
+        await NotificationService.instance.scheduleTodoReminder(
+          notificationId: DateTimeHelper.notificationIdFromTodoId(todo.id),
+          title: todo.title,
+          body: todo.description,
+          scheduledAt: todo.reminderAt!,
+        );
+      }
     });
   }
 
@@ -74,6 +85,18 @@ class TodoController extends AsyncNotifier<void> {
     state = const AsyncLoading();
     state = await AsyncValue.guard(() async {
       await ref.read(updateTodoUseCaseProvider).call(todo);
+
+      final notificationId = DateTimeHelper.notificationIdFromTodoId(todo.id);
+      await NotificationService.instance.cancelReminder(notificationId);
+
+      if (todo.reminderAt != null) {
+        await NotificationService.instance.scheduleTodoReminder(
+          notificationId: notificationId,
+          title: todo.title,
+          body: todo.description,
+          scheduledAt: todo.reminderAt!,
+        );
+      }
     });
   }
 
@@ -86,6 +109,10 @@ class TodoController extends AsyncNotifier<void> {
       await ref
           .read(deleteTodoUseCaseProvider)
           .call(userId: userId, todoId: todoId);
+
+      await NotificationService.instance.cancelReminder(
+        DateTimeHelper.notificationIdFromTodoId(todoId),
+      );
     });
   }
 

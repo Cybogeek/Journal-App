@@ -1,6 +1,6 @@
 # Flutter Sample Project Repo
 
-#### Updated 03-09-2026
+#### Updated 08-09-2026
 
 ## Journal App Repo
 
@@ -28,7 +28,7 @@ Check the app folder and README file for details. It shows the use of REST API a
 
 ## DBMS/ Firebase Demo- Todo App
 
-#### Version :1.0
+#### Version :2.0 (Local Notification & Reminder added)
 
 Check the app folder and README file for details. It shows the use of Firebase as DBMS and statemanagement in a simple Todo app.
 

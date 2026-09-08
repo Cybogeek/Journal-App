@@ -13,6 +13,7 @@ class TodoModel extends TodoEntity {
     required super.createdAt,
     required super.updatedAt,
     required super.dueDate,
+    required super.reminderAt,
     required super.colorValue,
   });
 
@@ -26,6 +27,7 @@ class TodoModel extends TodoEntity {
       createdAt: entity.createdAt,
       updatedAt: entity.updatedAt,
       dueDate: entity.dueDate,
+      reminderAt: entity.reminderAt,
       colorValue: entity.colorValue,
     );
   }
@@ -36,6 +38,7 @@ class TodoModel extends TodoEntity {
     final createdTs = map[FirestoreConstants.createdAt] as Timestamp?;
     final updatedTs = map[FirestoreConstants.updatedAt] as Timestamp?;
     final dueTs = map[FirestoreConstants.dueDate] as Timestamp?;
+    final reminderTs = map[FirestoreConstants.reminderAt] as Timestamp?;
 
     return TodoModel(
       id: doc.id,
@@ -46,6 +49,7 @@ class TodoModel extends TodoEntity {
       createdAt: createdTs?.toDate() ?? DateTime.now(),
       updatedAt: updatedTs?.toDate() ?? DateTime.now(),
       dueDate: dueTs?.toDate(),
+      reminderAt: reminderTs?.toDate(),
       colorValue: map[FirestoreConstants.colorValue] ?? 0xFF6750A4,
     );
   }
@@ -60,6 +64,9 @@ class TodoModel extends TodoEntity {
       FirestoreConstants.updatedAt: Timestamp.fromDate(updatedAt),
       FirestoreConstants.dueDate: dueDate != null
           ? Timestamp.fromDate(dueDate!)
+          : null,
+      FirestoreConstants.reminderAt: reminderAt != null
+          ? Timestamp.fromDate(reminderAt!)
           : null,
       FirestoreConstants.colorValue: colorValue,
     };
